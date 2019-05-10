@@ -1,0 +1,17 @@
+{
+    "icon": "icon.png",
+    "commands": [
+        {
+            "script" : "./combine.js",
+            "shortcut" : "",
+            "name" : "Combine Text Layers",
+            "identifier" : "combine text layers"
+            }
+        ],
+    "menu": {
+        "title": "text-editing",
+        "items": [
+            "combine text layers"
+        ]
+    }
+}
