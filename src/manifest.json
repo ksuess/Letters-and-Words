@@ -2,16 +2,19 @@
     "icon": "icon.png",
     "commands": [
         {
+            "name" : "Combine Text Layers",
+            "identifier" : "combine text layers",
             "script" : "./combine.js",
             "shortcut" : "",
-            "name" : "Combine Text Layers",
-            "identifier" : "combine text layers"
+            "handler": "combine_to_farest"
             }
         ],
     "menu": {
-        "title": "text-editing",
+        "title": "Letters and Words",
         "items": [
             "combine text layers"
         ]
-    }
+    },
+    "author": "Katja Suess",
+    "name": "Letters and Words"
 }
