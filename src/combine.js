@@ -1,7 +1,7 @@
 import sketch from 'sketch'
 
 export function combine_to_farest() {
-    const textwidth = 250
+    const textwidth = 150
     const doc = sketch.getSelectedDocument()
     const selectedLayers = doc.selectedLayers
 
@@ -18,12 +18,12 @@ export function combine_to_farest() {
     }
     var finalLayer = textLayers.shift()
     textLayers.forEach(function (layer, i){
-        finalLayer.text += layer.text
+        finalLayer.text += "\n" + layer.text
         finalLayer.frame.width = textwidth
         layer.remove()
     });
-    var finalText = finalLayer.text;
+    const finalText = finalLayer.text;
     doc.selectedLayers = [finalLayer];
     // sketch.UI.message('Text has been merged: ' + finalText)
-    sketch.UI.message('Text has been merged: "${finalText}"')
+    sketch.UI.message(`Text has been merged: ${finalText}`)
 }
